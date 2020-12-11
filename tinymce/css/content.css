@@ -1,0 +1,355 @@
+:root {
+  --editor-bg: #ffffff;
+  --editor-link-color: #2d3ce2;
+  --editor-text-color: #222222;
+  --editor-blockquote-bg: #f5f5f5;
+  --editor-pre-bg: #f5f5f5;
+  --editor-pre-border-color: #d3dce6;
+  --editor-pre-text-color: #25265e;
+  --editor-table-bg: #ffffff;
+  --editor-table-head: #6c7ae0;
+  --editor-table-nth-row: #f5f6fc;
+  --editor-table-head-text: #ffffff;
+  --editor-table-data-text: #717171;
+  --editor-table-scroll-bg: #f5f5f5;
+  --editor-table-scroll-thumb: #6c7ae0;
+  --editor-fig-caption: #333333;
+  /* Dark colors */
+  --editor-bg-dark: #121212;
+  --editor-text-color-dark: #ffffff;
+  --editor-blockquote-bg-dark: #313131;
+  --editor-pre-bg-dark: #2f2f2f;
+  --editor-pre-border-color-dark: #5f6163;
+  --editor-pre-text-color-dark: #dfdfec;
+  --editor-table-bg-dark: #212121;
+  --editor-table-head-dark: #6c7ae0;
+  --editor-table-nth-row-dark: #282828;
+  --editor-table-head-text-dark: #ffffff;
+  --editor-table-data-text-dark: #717171;
+  --editor-table-scroll-bg-dark: #f5f5f5;
+  --editor-table-scroll-thumb-dark: #6c7ae0;
+  --editor-fig-caption-dark: #8f8f8f;
+}
+body.mce-content-body {
+  font-family: 'Roboto';
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--editor-text-color);
+  margin: 1rem;
+  width: 95vw;
+  background-color: var(--editor-bg);
+}
+
+/* ################################################## */
+/* [Blockquote] */
+/* ################################################## */
+.mce-content-body blockquote {
+  margin: 0;
+  padding: 1rem 2rem !important;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.mce-content-body blockquote,
+.mce-content-body q {
+  quotes: none;
+}
+.mce-content-body blockquote:before,
+.mce-content-body blockquote:after,
+.mce-content-body q:before,
+.mce-content-body q:after {
+  content: '';
+  content: none;
+}
+
+.mce-content-body blockquote {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 70%;
+  border-left: solid 0.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 2rem auto;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.mce-content-body blockquote {
+  border-left-color: rgba(0, 0, 0, 0.25);
+  background-color: var(--editor-blockquote-bg);
+}
+
+.mce-content-body blockquote > cite::before {
+  content: '- ';
+}
+
+.mce-content-body blockquote > cite {
+  display: block;
+  text-align: right;
+}
+
+/* ################################################## */
+/* [Link] */
+/* ################################################## */
+.mce-content-body a {
+  text-decoration: none;
+  color: var(--editor-link-color);
+}
+.mce-content-body a:hover {
+  cursor: pointer;
+}
+.mce-content-body a:visited {
+  color: var(--editor-link-color);
+}
+
+/* ################################################## */
+/* [Figure and Image] */
+/* ################################################## */
+.mce-content-body figure {
+  display: table;
+  margin: 1rem auto;
+}
+.mce-content-body figure figcaption {
+  color: var(--editor-fig-caption);
+  display: block;
+  font-size: 0.97rem;
+  font-weight: 300;
+  letter-spacing: 0.001rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.mce-content-body figure img {
+  max-width: 90vw;
+  max-height: 70vh;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+/* ################################################## */
+/* [Horizontal line] */
+/* ################################################## */
+.mce-content-body hr {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
+/* ################################################## */
+/* [Preformatted] */
+/* ################################################## */
+.mce-content-body pre:not([class~='language']) {
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Droid Sans Mono', 'Inconsolata', 'Menlo', 'Consolas',
+    'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+  width: 60vw;
+  display: block;
+  line-height: 1.75;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  background: var(--editor-pre-bg);
+  border: 1px solid var(--editor-pre-border-color);
+  color: var(--editor-pre-text-color);
+}
+
+/* ################################################## */
+/* [Table] */
+/* ################################################## */
+.mce-content-body .container-table100 {
+  max-width: 80%;
+  margin: 0 auto;
+  height: fit-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mce-content-body .table100 {
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.mce-content-body .wrap-table100 {
+  width: 100%;
+}
+
+.mce-content-body .table100 {
+  background-color: var(--editor-table-background);
+}
+
+.mce-content-body .container-table100 table {
+  width: 100%;
+}
+
+.mce-content-body .container-table100 th,
+.mce-content-body .container-table100 td {
+  font-weight: unset;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 200px;
+}
+
+.mce-content-body .table100 th {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.mce-content-body .table100 td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.mce-content-body .table100 {
+  width: 100%;
+  position: relative;
+}
+
+.mce-content-body .table100-firstcol table {
+  background-color: var(--editor-table-background);
+}
+
+.mce-content-body .wrap-table100-nextcols {
+  width: 100%;
+  overflow: auto;
+}
+
+.mce-content-body .table100-nextcols table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.mce-content-body .table100-nextcols table thead {
+  background-color: var(--editor-table-head);
+}
+
+.mce-content-body .table100-nextcols table tr:nth-child(even) {
+  background-color: var(--editor-table-nth-row);
+}
+
+.mce-content-body .table100 th {
+  font-size: 1rem;
+  color: var(--editor-table-head-text);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.mce-content-body .table100 td {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.mce-content-body .table100 .table100-nextcols td {
+  color: var(--editor-table-data-text);
+}
+
+.mce-content-body .table100 tr {
+  border-bottom: 1px solid var(--editor-table-border-bottom);
+}
+
+.mce-content-body .wrap-table100-nextcols::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--editor-table-scroll-bg);
+  border-radius: 10px;
+}
+
+.mce-content-body .wrap-table100-nextcols::-webkit-scrollbar {
+  height: 8px;
+  background-color: var(--editor-table-scroll-bg);
+}
+
+.mce-content-body .wrap-table100-nextcols::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--editor-table-scroll-thumb);
+}
+/* ################################################## */
+/* [Code] */
+/* ################################################## */
+/* Done later */
+
+/* --------------------------------------------------------------- */
+
+/* ================= */
+/* DARK THEME STYLES */
+/* ================= */
+
+/* body.mce-content-body.dark-theme {
+  color: var(--editor-text-color-dark);
+  background-color: var(--editor-bg-dark);
+} */
+/* ################################################## */
+/* [Blockquote] */
+/* ################################################## */
+/* .mce-content-body.dark-theme blockquote {
+  border-left-color: rgba(0, 0, 0, 0.25);
+  background-color: var(--editor-blockquote-bg-dark);
+} */
+/* ################################################## */
+/* [Figure and Image] */
+/* ################################################## */
+/* .mce-content-body.dark-theme figure figcaption {
+  color: var(--editor-fig-caption-dark);
+}
+.mce-content-body.dark-theme figure img {
+  max-width: 90vw;
+  max-height: 70vh;
+  filter: brightness(0.8) contrast(1.2);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.4),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.44), 0px 3px 14px 2px rgba(0, 0, 0, 0.42);
+} */
+/* ################################################## */
+/* [Preformatted] */
+/* ################################################## */
+/* .mce-content-body.dark-theme pre:not([class~='language']) {
+  background: var(--editor-pre-bg-dark);
+  border: 1px solid var(--editor-pre-border-color-dark);
+  color: var(--editor-pre-text-color-dark);
+} */
+/* ################################################## */
+/* [Table] */
+/* ################################################## */
+/* .mce-content-body.dark-theme .table100 {
+  background-color: var(--editor-table-bg-dark);
+}
+.mce-content-body.dark-theme .table100-firstcol table {
+  background-color: var(--editor-table-bg-dark);
+}
+.mce-content-body.dark-theme .table100-nextcols table thead {
+  background-color: var(--editor-table-head-dark);
+}
+.mce-content-body.dark-theme .table100-nextcols table tr:nth-child(even) {
+  background-color: var(--editor-table-nth-row-dark);
+}
+.mce-content-body.dark-theme .table100 th {
+  color: var(--editor-table-head-text-dark);
+}
+
+.mce-content-body.dark-theme .table100 .table100-nextcols td {
+  color: var(--editor-table-data-text-dark);
+}
+.mce-content-body.dark-theme .wrap-table100-nextcols::-webkit-scrollbar-track {
+  background-color: var(--editor-table-scroll-bg-dark);
+  border-radius: 10px;
+}
+.mce-content-body.dark-theme .wrap-table100-nextcols::-webkit-scrollbar {
+  height: 8px;
+  background-color: var(--editor-table-scroll-bg-dark);
+}
+
+.mce-content-body.dark-theme .wrap-table100-nextcols::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--editor-table-scroll-thumb-dark);
+} */
