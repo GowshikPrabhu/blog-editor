@@ -57,3 +57,8 @@ export const TOOLBAR = [
     ]
   }
 ];
+
+export const FONT_FORMATS =
+  // eslint-disable-next-line no-multi-str
+  'Arial=arial,liberation-sans,helvetica,sans-serif;Courier New=courier new,courier;\
+  Georgia=georgia,palatino;Liberation Sans=liberation-sans,sans-serif;Roboto Slab=Roboto Slab,serif';

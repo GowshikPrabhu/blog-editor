@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/cnf5sjq.css");
+@import url('https://use.typekit.net/cnf5sjq.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root {
   --editor-bg: #ffffff;
@@ -33,7 +33,7 @@
   --editor-fig-caption-dark: #8f8f8f;
 }
 body.mce-content-body {
-  font-family: Arial,liberation-sans,sans-serif';
+  font-family: Arial, liberation-sans, sans-serif;
   font-size: 17px;
   line-height: 1.4;
   color: var(--editor-text-color);
@@ -41,8 +41,13 @@ body.mce-content-body {
   width: 95vw;
   background-color: var(--editor-bg);
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: liberation-sans,sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab';
   font-weight: 400;
 }
 /* ################################################## */

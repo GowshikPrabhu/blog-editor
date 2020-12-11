@@ -1,7 +1,7 @@
 import React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 import imageUploadHandler from '../services/uploadImage';
-import { PLUGINS, TOOLBAR } from './editor-plugins-toolbar';
+import { FONT_FORMATS, PLUGINS, TOOLBAR } from './editor-configs';
 import { editorSetup } from '../services/editor-setup';
 
 const HTMLEditor = () => {
@@ -19,9 +19,7 @@ const HTMLEditor = () => {
           tiny_mce_wiris:
             'https://www.wiris.net/demo/plugins/tiny_mce/plugin.js'
         },
-        font_formats: 
-          'Arial=arial,helvetica,sans-serif;Roboto=roboto,sans-serif;Georgia=georgia,palatino;\
-          Source Code Pro=source code pro,courier new,courier,monospace,sans-serif;',
+        font_formats: FONT_FORMATS,
         toolbar: TOOLBAR,
         autosave_ask_before_unload: true,
         autosave_interval: '30s',
@@ -30,11 +28,11 @@ const HTMLEditor = () => {
         quickbars_selection_toolbar:
           'bold italic | quicklink quickimage quicktable',
         skin: isDark ? 'oxide-dark' : 'oxide',
-        content_css: '/tinymce/css/content.css',
         images_upload_handler: imageUploadHandler,
         codesample_content_css:
           'http://ourcodeworld.com/material/css/prism.css',
         setup: editorSetup,
+        content_css: '/tinymce/css/content.css',
         templates: [
           {
             title: 'Table',
