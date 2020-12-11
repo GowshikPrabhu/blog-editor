@@ -17,7 +17,7 @@ const postToImgbb = (base64str, filename) =>
       hostname: 'api.imgbb.com',
       method: 'POST',
       timeout: 5000,
-      path: `/1/upload?key=${process.env.IMGBB_API_KEY}&name=${filename}`,
+      path: `/1/upload?key=${process.env.REACT_APP_IMGBB_API_KEY}&name=${filename}`,
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
