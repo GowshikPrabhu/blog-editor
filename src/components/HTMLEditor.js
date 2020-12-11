@@ -19,6 +19,9 @@ const HTMLEditor = () => {
           tiny_mce_wiris:
             'https://www.wiris.net/demo/plugins/tiny_mce/plugin.js'
         },
+        font_formats: 
+          'Arial=arial,helvetica,sans-serif;Roboto=roboto,sans-serif;Georgia=georgia,palatino;\
+          Source Code Pro=source code pro,courier new,courier,monospace,sans-serif;',
         toolbar: TOOLBAR,
         autosave_ask_before_unload: true,
         autosave_interval: '30s',
