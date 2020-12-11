@@ -32,12 +32,12 @@ const HTMLEditor = () => {
         codesample_content_css:
           'http://ourcodeworld.com/material/css/prism.css',
         setup: editorSetup,
-        content_css: '/tinymce/css/content.css',
+        content_css: '/blog-editor/tinymce/css/content.css',
         templates: [
           {
             title: 'Table',
             description: 'Fixed header table',
-            url: '/tinymce/templates/table.html'
+            url: '/blog-editor/tinymce/templates/table.html'
           }
         ]
       }}
